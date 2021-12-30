@@ -1,0 +1,101 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* space */
+  --base-space: 12px;
+
+  /* size */
+  --img-size: 70px;
+  --logo-size: 150px;
+  --btn-font-size: 18px;
+
+  /* animation-duration */
+  --hover-duration: 300ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+  height: 100vh;
+  padding: var(--base-space);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-black);
+}
+
+.logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  transition: transform var(--hover-duration) ease;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  width: var(--img-size);
+  height: var(--img-size);
+  margin-right: var(--base-space);
+  cursor: pointer;
+  transition: transform var(--hover-duration) ease;
+}
+
+.btn:hover,
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.colorbtn {
+  font-size: var(--btn-font-size);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+}
+
+.pink {
+  background-color: var(--color-pink);
+}
+
+.items {
+  list-style: none;
+  padding-left: 0;
+  overflow-y: auto;
+  width: 70%;
+}
+
+.item {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--base-space);
+}
+
+.item img {
+  width: var(--img-size);
+  height: var(--img-size);
+}
+
+.invisible {
+  display: none;
+}
